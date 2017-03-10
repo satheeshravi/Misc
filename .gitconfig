@@ -1,0 +1,39 @@
+[user]
+	name = Satheesh Ravindranath
+	email = saravind@microsoft.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+[core]
+	autocrlf = true
+	excludesfile = C:\\Users\\saravind\\Documents\\gitignore_global.txt
+	preloadindex = true
+	fscache = true
+[credential]
+[diff]
+	tool = bc
+[difftool "bc3"]
+	path = D:\\Program Files\\Beyond Compare 4\\BComp.exe
+[merge]
+	tool = bc
+[mergetool "bc3"]
+	path = D:\\Program Files\\Beyond Compare 4\\BComp.exe
+[difftool "bc"]
+	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
+[mergetool "bc"]
+	path = C:\\Program Files\\Beyond Compare 4\\BComp.exe
+[alias]
+	co = checkout
+    br = branch
+    st = status
+    log10 = log --oneline -10
+    log20 = log --oneline -20
+    details = show --pretty="full" --name-only -r
+    files = show --pretty="format:" --name-only -r
+    difflist = diff --name-only $1 $2
+	unstage = reset HEAD
+	commitDiff = log --oneline -10 origin/master..HEAD
+	localCommits = log --oneline origin/master..HEAD
+	mychanges = log --author="Satheesh"
+   	brName = rev-parse --abbrev-ref HEAD 
